@@ -6,15 +6,55 @@ $font-weight: 300 !default;
 $font-size-base: 16px !default;
 $font-color: $color-gray-800 !default;
 $heading-font-color: $color-gray-800 !default;
-$font-family: 'Open Sans', sans-serif !default;
-$heading-font-family: 'Open Sans', sans-serif !default;
+// Credit: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+$font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif !default;
+$font-family-mono: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace !default;
+$heading-font-family: $font-family !default;
 
-body {
+@mixin title1 {
+  font-size: $font-size-base * 3;
+  line-height: $font-size-base * 3.75;
+}
+
+@mixin title2 {
+  font-size: $font-size-base * 2.5;
+  line-height: $font-size-base * 3.25;
+}
+
+@mixin title3 {
+  font-size: $font-size-base * 2;
+  line-height: $font-size-base * 2.75;
+}
+
+@mixin title4 {
+  font-size: $font-size-base * 1.75;
+  line-height: $font-size-base * 2.5;
+}
+
+@mixin title5 {
+  font-size: $font-size-base * 1.5;
+  line-height: $font-size-base * 2.25;
+}
+
+@mixin title6 {
+  font-size: $font-size-base * 1.25;
+  line-height: $font-size-base * 2;
+}
+
+@mixin body1($factor: 1) {
   font-family: $font-family;
-  font-size: $font-size-base;
-  line-height: $line-height;
+  font-size: $font-size-base * $factor;
+  line-height: $line-height * $factor;
   font-weight: $font-weight;
   color: $font-color;
+}
+
+@mixin body2 {
+  @include body1(0.9)
+}
+
+body {
+  @include body1;
 }
 
 h1,
@@ -66,6 +106,14 @@ h6 {
   line-height: $font-size-base * 2;
 }
 
+.body1 {
+  @include body1()
+}
+
+.body2 {
+  @include body2()
+}
+
 p {
   margin-bottom: 15px;
 
@@ -75,7 +123,16 @@ p {
   }
 }
 
+.bold,
 strong,
 b {
-    font-weight: 600;
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.mono {
+  font-family: $font-family-mono;
 }

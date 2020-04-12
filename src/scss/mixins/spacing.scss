@@ -1,0 +1,44 @@
+////
+/// Spacing
+///
+/// @group Spacing
+/// @author Michael Becker
+////
+
+/// This is the color that should be used for coffee
+/// @type
+$spacing: 5px !default;
+
+$spacings-def: (0: 0, 1: 1, 2: 2, 3: 3, 4: 4) !default;
+
+$spacings-out-responsive: false !default;
+
+@function space($size) {
+  @return $spacing * map-get($spacings-def, $size)
+}
+
+@mixin spacingMaker($short, $property) {
+  @each $name, $size in $spacings-def {
+    .#{$short}-#{$name} {
+      #{$property}: space($size);
+    }
+  }
+}
+
+@mixin spacingMakerX($short, $property) {
+  @each $name, $size in $spacings-def {
+    .#{$short}-#{$name} {
+      #{$property}-left: space($size);
+      #{$property}-right: space($size);
+    }
+  }
+}
+
+@mixin spacingMakerY($short, $property) {
+  @each $name, $size in $spacings-def {
+    .#{$short}-#{$name} {
+      #{$property}-top: space($size);
+      #{$property}-bottom: space($size);
+    }
+  }
+}

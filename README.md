@@ -4,6 +4,14 @@ Mustard is a **starter CSS framework** that actually looks good.
 [![npm](https://img.shields.io/npm/v/mustard-ui.svg)](https://www.npmjs.com/package/mustard-ui)
 [![npm](https://img.shields.io/npm/l/mustard-ui.svg)](https://www.npmjs.com/package/mustard-ui)
 
+## This Fork
+
+This is a fork from mustard-ui which adds class-name selectors and a few extra components to mustard.
+
+Optimized for usage as the whole styling for AMP Pages. (target)
+
+See [README_FORK](./README_FORK.md) for the differences.
+
 ## Getting Started
 Mustard UI is currently in release v1.0.  Try it out today and help us fine tune the look and feel for future versions!
 

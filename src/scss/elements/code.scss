@@ -10,7 +10,7 @@ pre {
     padding: 10px 15px;
     border-left: 4px solid $code-border-color;
     background: $code-bg-color;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: $font-family-mono;
     font-size: 15px;
     color: $color-gray-900;
     white-space: normal;
@@ -20,6 +20,6 @@ pre {
 code {
     background: $code-bg-color;
     color: $color-gray-900;
-    font-family: Monaco, 'Courier New', Courier, monospace;
+    font-family: $font-family-mono;
     white-space: pre;
 }

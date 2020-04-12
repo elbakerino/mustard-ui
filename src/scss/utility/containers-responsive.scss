@@ -1,0 +1,16 @@
+$container-responsive-sizes: (
+  'small' : 90%,
+  'large' : map-get($container-sizes, 'large'),
+) !default;
+$container-gutter: space(4) 0 !default;
+
+.container {
+  &-responsive {
+    @include breakpoint-min($bp-medium) {
+      max-width: map-get($container-responsive-sizes, 'small');
+    }
+    @include breakpoint-min($bp-xlarge) {
+      max-width: map-get($container-responsive-sizes, 'large');
+    }
+  }
+}

@@ -5,18 +5,17 @@ $button-radius: 4px !default;
 $button-shadow: false !default;
 $button-text-color: $color-white !default;
 $button-colors: (
-    'primary' : $brand-color,
-    'success' : $color-green-500,
-    'info'    : $color-gray-500,
-    'warning' : $color-amber-600,
-    'danger'  : $color-red-500
+        'primary' : $brand-color,
+        'success' : $color-green-500,
+        'info' : $color-gray-500,
+        'warning' : $color-amber-600,
+        'danger' : $color-red-500
 ) !default;
 
-.button,
-button,
-input[type='button'],
-input[type='reset'],
-input[type='submit'] {
+$button-class: ".btn" !default;
+$button-selector: "#{$button-class}, button, input[type='button'], input[type='reset'], input[type='submit']" !default;
+
+#{$button-selector} {
     display: inline-block;
     height: 40px;
     margin: 0 2px 15px;
@@ -69,42 +68,49 @@ input[type='submit'] {
         opacity: 0.5;
         cursor: not-allowed;
     }
+
 }
 
 @each $name, $color in $button-colors {
-    .button-#{$name} {
+    #{$button-class}-#{$name} {
         background-color: $color;
         color: $button-text-color;
         border-color: $color;
     }
 
-    .button-#{$name}-outlined {
+    #{$button-class}-#{$name}-o,
+    #{$button-class}-#{$name}-outlined {
         background-color: $color-white;
         color: $color;
         border-color: $color;
     }
 
-    .button-#{$name}-text {
+    #{$button-class}-#{$name}-text {
         color: $color;
         border-color: transparent;
     }
-
 }
 
-.button-round {
+#{$button-class}-round {
     border-radius: 24px;
 }
 
-.button-large {
+#{$button-class}-large {
     height: 48px;
     line-height: 48px;
     padding: 0 30px;
     font-size: 16px;
 }
 
-.button-small {
+#{$button-class}-small {
     height: 30px;
     line-height: 30px;
     padding: 0 15px;
     font-size: 12px;
+}
+
+#{$button-class}-raw {
+    border: 0;
+    background: 0;
+    cursor: pointer;
 }
