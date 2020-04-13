@@ -2,7 +2,6 @@
 // ==============================
 
 $body-bg-color: $color-white !default;
-$brand-color: $color-green-500 !default;
 
 * {
     margin: 0;
@@ -26,4 +25,62 @@ body {
 
 main {
     flex: 1;
+}
+
+// moved base typo here, as they should be overwritten by components
+
+// TYPOGRAPHY
+// ==============================
+body {
+    @include body1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family;
+    font-weight: $font-weight;
+    color: $heading-font-color;
+    margin: 0 0 0.3em;
+    font-weight: 600;
+}
+
+h1 {
+    @include title1;
+}
+
+h2 {
+    @include title2;
+}
+
+h3 {
+    @include title3;
+}
+
+h4 {
+    @include title4;
+}
+
+h5 {
+    @include title5;
+}
+
+h6 {
+    @include title6;
+}
+
+p {
+    margin-bottom: 15px;
+
+    &.magnify {
+        font-size: 1em * 1.1;
+        line-height: 1.8;
+    }
+}
+
+.bold {
+    font-weight: 600;
 }

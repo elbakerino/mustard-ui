@@ -1,0 +1,18 @@
+////
+/// Opacity Classes
+/// @group Opacity
+////
+
+$opacity-steps: (
+    0 : 0,
+    1 : 0.2,
+    2 : 0.3,
+    3 : 0.6,
+    4 : 0.8,
+) !default;
+
+@each $name, $opacity in $opacity-steps {
+    .op-#{$name} {
+        opacity: $opacity;
+    }
+}

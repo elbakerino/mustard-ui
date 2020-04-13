@@ -8,29 +8,29 @@
 // Margins Auto
 
 .mr-a {
-  margin-right: auto;
+    margin-right: auto;
 }
 
 .ml-a {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .mt-a {
-  margin-top: auto;
+    margin-top: auto;
 }
 
 .mb-a {
-  margin-bottom: auto;
+    margin-bottom: auto;
 }
 
 .mx-a {
-  margin-right: auto;
-  margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .my-a {
-  margin-top: auto;
-  margin-bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 @include spacingMaker('m', 'margin');
@@ -41,6 +41,14 @@
 @include spacingMaker('mb', 'margin-bottom');
 @include spacingMaker('ml', 'margin-left');
 
+@include spacingMaker('m', 'margin', true);
+@include spacingMakerX('mx', 'margin', true);
+@include spacingMakerY('my', 'margin', true);
+@include spacingMaker('mt', 'margin-top', true);
+@include spacingMaker('mr', 'margin-right', true);
+@include spacingMaker('mb', 'margin-bottom', true);
+@include spacingMaker('ml', 'margin-left', true);
+
 @include spacingMaker('p', 'padding');
 @include spacingMakerX('px', 'padding');
 @include spacingMakerY('py', 'padding');
@@ -50,75 +58,107 @@
 @include spacingMaker('pl', 'padding-left');
 
 @if $spacings-out-responsive {
-  @include breakpoint-min($bp-small) {
-    @include spacingMaker('m-sm', 'margin');
-    @include spacingMakerX('mx-sm', 'margin');
-    @include spacingMakerY('my-sm', 'margin');
-    @include spacingMaker('mt-sm', 'margin-top');
-    @include spacingMaker('mr-sm', 'margin-right');
-    @include spacingMaker('mb-sm', 'margin-bottom');
-    @include spacingMaker('ml-sm', 'margin-left');
+    @include breakpoint-min($bp-small) {
+        @include spacingMaker('m-sm', 'margin');
+        @include spacingMakerX('mx-sm', 'margin');
+        @include spacingMakerY('my-sm', 'margin');
+        @include spacingMaker('mt-sm', 'margin-top');
+        @include spacingMaker('mr-sm', 'margin-right');
+        @include spacingMaker('mb-sm', 'margin-bottom');
+        @include spacingMaker('ml-sm', 'margin-left');
 
-    @include spacingMaker('p-sm', 'padding');
-    @include spacingMakerX('px-sm', 'padding');
-    @include spacingMakerY('py-sm', 'padding');
-    @include spacingMaker('pt-sm', 'padding-top');
-    @include spacingMaker('pr-sm', 'padding-right');
-    @include spacingMaker('pb-sm', 'padding-bottom');
-    @include spacingMaker('pl-sm', 'padding-left');
-  }
+        @include spacingMaker('m-sm', 'margin', true);
+        @include spacingMakerX('mx-sm', 'margin', true);
+        @include spacingMakerY('my-sm', 'margin', true);
+        @include spacingMaker('mt-sm', 'margin-top', true);
+        @include spacingMaker('mr-sm', 'margin-right', true);
+        @include spacingMaker('mb-sm', 'margin-bottom', true);
+        @include spacingMaker('ml-sm', 'margin-left', true);
 
-  @include breakpoint-min($bp-medium) {
-    @include spacingMaker('m-md', 'margin');
-    @include spacingMakerX('mx-md', 'margin');
-    @include spacingMakerY('my-md', 'margin');
-    @include spacingMaker('mt-md', 'margin-top');
-    @include spacingMaker('mr-md', 'margin-right');
-    @include spacingMaker('mb-md', 'margin-bottom');
-    @include spacingMaker('ml-md', 'margin-left');
+        @include spacingMaker('p-sm', 'padding');
+        @include spacingMakerX('px-sm', 'padding');
+        @include spacingMakerY('py-sm', 'padding');
+        @include spacingMaker('pt-sm', 'padding-top');
+        @include spacingMaker('pr-sm', 'padding-right');
+        @include spacingMaker('pb-sm', 'padding-bottom');
+        @include spacingMaker('pl-sm', 'padding-left');
+    }
 
-    @include spacingMaker('p-md', 'padding');
-    @include spacingMakerX('px-md', 'padding');
-    @include spacingMakerY('py-md', 'padding');
-    @include spacingMaker('pt-md', 'padding-top');
-    @include spacingMaker('pr-md', 'padding-right');
-    @include spacingMaker('pb-md', 'padding-bottom');
-    @include spacingMaker('pl-md', 'padding-left');
-  }
+    @include breakpoint-min($bp-medium) {
+        @include spacingMaker('m-md', 'margin');
+        @include spacingMakerX('mx-md', 'margin');
+        @include spacingMakerY('my-md', 'margin');
+        @include spacingMaker('mt-md', 'margin-top');
+        @include spacingMaker('mr-md', 'margin-right');
+        @include spacingMaker('mb-md', 'margin-bottom');
+        @include spacingMaker('ml-md', 'margin-left');
 
-  @include breakpoint-min($bp-large) {
-    @include spacingMaker('m-lg', 'margin');
-    @include spacingMakerX('mx-lg', 'margin');
-    @include spacingMakerY('my-lg', 'margin');
-    @include spacingMaker('mt-lg', 'margin-top');
-    @include spacingMaker('mr-lg', 'margin-right');
-    @include spacingMaker('mb-lg', 'margin-bottom');
-    @include spacingMaker('ml-lg', 'margin-left');
+        @include spacingMaker('m-md', 'margin', true);
+        @include spacingMakerX('mx-md', 'margin', true);
+        @include spacingMakerY('my-md', 'margin', true);
+        @include spacingMaker('mt-md', 'margin-top', true);
+        @include spacingMaker('mr-md', 'margin-right', true);
+        @include spacingMaker('mb-md', 'margin-bottom', true);
+        @include spacingMaker('ml-md', 'margin-left', true);
 
-    @include spacingMaker('p-lg', 'padding');
-    @include spacingMakerX('px-lg', 'padding');
-    @include spacingMakerY('py-lg', 'padding');
-    @include spacingMaker('pt-lg', 'padding-top');
-    @include spacingMaker('pr-lg', 'padding-right');
-    @include spacingMaker('pb-lg', 'padding-bottom');
-    @include spacingMaker('pl-lg', 'padding-left');
-  }
+        @include spacingMaker('p-md', 'padding');
+        @include spacingMakerX('px-md', 'padding');
+        @include spacingMakerY('py-md', 'padding');
+        @include spacingMaker('pt-md', 'padding-top');
+        @include spacingMaker('pr-md', 'padding-right');
+        @include spacingMaker('pb-md', 'padding-bottom');
+        @include spacingMaker('pl-md', 'padding-left');
+    }
 
-  @include breakpoint-min($bp-xlarge) {
-    @include spacingMaker('m-xlg', 'margin');
-    @include spacingMakerX('mx-xlg', 'margin');
-    @include spacingMakerY('my-xlg', 'margin');
-    @include spacingMaker('mt-xlg', 'margin-top');
-    @include spacingMaker('mr-xlg', 'margin-right');
-    @include spacingMaker('mb-xlg', 'margin-bottom');
-    @include spacingMaker('ml-xlg', 'margin-left');
+    @include breakpoint-min($bp-large) {
+        @include spacingMaker('m-lg', 'margin');
+        @include spacingMakerX('mx-lg', 'margin');
+        @include spacingMakerY('my-lg', 'margin');
+        @include spacingMaker('mt-lg', 'margin-top');
+        @include spacingMaker('mr-lg', 'margin-right');
+        @include spacingMaker('mb-lg', 'margin-bottom');
+        @include spacingMaker('ml-lg', 'margin-left');
 
-    @include spacingMaker('p-xlg', 'padding');
-    @include spacingMakerX('px-xlg', 'padding');
-    @include spacingMakerY('py-xlg', 'padding');
-    @include spacingMaker('pt-xlg', 'padding-top');
-    @include spacingMaker('pr-xlg', 'padding-right');
-    @include spacingMaker('pb-xlg', 'padding-bottom');
-    @include spacingMaker('pl-xlg', 'padding-left');
-  }
+        @include spacingMaker('m-lg', 'margin', true);
+        @include spacingMakerX('mx-lg', 'margin', true);
+        @include spacingMakerY('my-lg', 'margin', true);
+        @include spacingMaker('mt-lg', 'margin-top', true);
+        @include spacingMaker('mr-lg', 'margin-right', true);
+        @include spacingMaker('mb-lg', 'margin-bottom', true);
+        @include spacingMaker('ml-lg', 'margin-left', true);
+
+        @include spacingMaker('p-lg', 'padding');
+        @include spacingMakerX('px-lg', 'padding');
+        @include spacingMakerY('py-lg', 'padding');
+        @include spacingMaker('pt-lg', 'padding-top');
+        @include spacingMaker('pr-lg', 'padding-right');
+        @include spacingMaker('pb-lg', 'padding-bottom');
+        @include spacingMaker('pl-lg', 'padding-left');
+    }
+
+    @include breakpoint-min($bp-xlarge) {
+        @include spacingMaker('m-xlg', 'margin');
+        @include spacingMakerX('mx-xlg', 'margin');
+        @include spacingMakerY('my-xlg', 'margin');
+        @include spacingMaker('mt-xlg', 'margin-top');
+        @include spacingMaker('mr-xlg', 'margin-right');
+        @include spacingMaker('mb-xlg', 'margin-bottom');
+        @include spacingMaker('ml-xlg', 'margin-left');
+
+        @include spacingMaker('m-xlg', 'margin', true);
+        @include spacingMakerX('mx-xlg', 'margin', true);
+        @include spacingMakerY('my-xlg', 'margin', true);
+        @include spacingMaker('mt-xlg', 'margin-top', true);
+        @include spacingMaker('mr-xlg', 'margin-right', true);
+        @include spacingMaker('mb-xlg', 'margin-bottom', true);
+        @include spacingMaker('ml-xlg', 'margin-left', true);
+
+        @include spacingMaker('p-xlg', 'padding');
+        @include spacingMakerX('px-xlg', 'padding');
+        @include spacingMakerY('py-xlg', 'padding');
+        @include spacingMaker('pt-xlg', 'padding-top');
+        @include spacingMaker('pr-xlg', 'padding-right');
+        @include spacingMaker('pb-xlg', 'padding-bottom');
+        @include spacingMaker('pl-xlg', 'padding-left');
+    }
 }

@@ -5,6 +5,12 @@ https://mustard-ui.com
 */
 
 @import "base";
-@import "elements";
+
+// components
 @import "components";
+
+// elements should be able to overwrite components
+@import "elements";
+
+// utilities should be able to overwrite elements and components
 @import "utility";

@@ -1,14 +1,33 @@
 .items-start {
-  align-items: flex-start;
-  align-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .items-end {
-  align-items: flex-end;
-  align-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
 }
 
 .items-center {
-  align-items: center;
-  align-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-center {
+    justify-content: center;
+    justify-items: center;
+}
+
+.justify-start {
+    justify-content: flex-start;
+    justify-items: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+    justify-items: flex-end;
 }

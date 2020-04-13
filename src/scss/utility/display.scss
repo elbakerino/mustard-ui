@@ -2,79 +2,75 @@
 // ==============================
 
 $display-up: (
-  'sm' : $bp-small,
-  'md' : $bp-medium,
-  'lg' : $bp-large,
-  'xlg' : $bp-xlarge
+    'sm' : $bp-small,
+    'md' : $bp-medium,
+    'lg' : $bp-large,
+    'xlg' : $bp-xlarge
 ) !default;
 $display-down: (
-  'sm' : $bp-small,
-  'md' : $bp-medium,
-  'lg' : $bp-large,
-  'xlg' : $bp-xlarge,
+    'sm' : $bp-small,
+    'md' : $bp-medium,
+    'lg' : $bp-large,
+    'xlg' : $bp-xlarge,
 ) !default;
 
 .display-grid {
-  display: grid;
-  grid-column-gap: space(4);
-
-  &.dense {
-    grid-column-gap: space(2);
-  }
+    display: grid;
+    grid-column-gap: space(4);
 }
 
 .display-flex {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 .display-inline-flex {
-  display: inline-flex;
-  justify-content: space-around;
+    display: inline-flex;
+    justify-content: space-around;
 }
 
 .display-none {
-  display: none;
+    display: none;
 }
 
 .display-block {
-  display: block;
+    display: block;
 }
 
-.display-inline-block {
-  display: inline-block;
+.display-inline {
+    display: inline-block;
 }
 
 @each $name, $bp in $display-up {
-  .display-#{$name}-up {
-    display: none;
+    .display-#{$name}-up {
+        display: none;
 
-    @include breakpoint-min($bp) {
-      display: initial;
+        @include breakpoint-min($bp) {
+            display: initial;
+        }
     }
-  }
 }
 
 @each $name, $bp in $display-down {
-  .display-#{$name}-down {
-    display: none;
+    .display-#{$name}-down {
+        display: none;
 
-    @include breakpoint-max($bp - 1px) {
-      display: initial;
+        @include breakpoint-max($bp - 1px) {
+            display: initial;
+        }
     }
-  }
 }
 
 @each $up-name, $up-bp in $display-up {
-  @each $down-name, $down-bp in $display-down {
-    @if $up-bp < $down-bp {
-      .display-#{$up-name}-to-#{$down-name} {
-        display: none;
+    @each $down-name, $down-bp in $display-down {
+        @if $up-bp < $down-bp {
+            .display-#{$up-name}-to-#{$down-name} {
+                display: none;
 
-        @include breakpoint-min-max($up-bp, ($down-bp - 1px)) {
-          display: initial;
+                @include breakpoint-min-max($up-bp, ($down-bp - 1px)) {
+                    display: initial;
+                }
+            }
         }
-      }
     }
-  }
 }

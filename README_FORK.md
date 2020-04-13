@@ -4,7 +4,7 @@ Global concept changes:
 
 - space / spacings for configurable gutters etc.
     - on root container (e.g. panels) only margin-bottom, no top
-- often available modifier `.dense`
+- often available modifier `.dense|-dense`
 - font-sizes use em instead of px
 - new import style prio
 
@@ -16,7 +16,7 @@ Selectors:
 
 - `.panel-image`
 - `.panel-hero-image`
-- `.panel-body.dense`
+- `.panel-body-dense`
 
 ### Loading
 
@@ -39,6 +39,8 @@ Selectors:
 ## Elements
 
 ### Buttons
+
+Removed the line-height and added y-paddings, better true-center for any font-family, introduces problems when adding icons (should be solved with `ic-btn`)
 
 Overwriting the default button selectors:
 
@@ -67,6 +69,16 @@ Variables:
 ```scss
 $font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif !default;
 $font-family-mono: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace !default;
+$text-colors: (
+  'primary' : $brand-color,
+  'success' : $color-green-500,
+  'info' : $color-gray-500,
+  'warning' : $color-amber-600,
+  'danger' : $color-red-500,
+  'light' : $color-gray-50,
+  'dark' : $color-gray-900,
+  'accent' : $color-blue-700,
+) !default;
 ```
 
 Mixins:
@@ -78,6 +90,8 @@ Selectors:
 - `.bold`
 - `.italic`
 - `.mono`
+- `.upper`, `.lower`, `.capitalize` for text-transforms
+- `.color-primary`, `.color-success`, ... like defined in the var 
 
 ## Utilities
 
@@ -93,13 +107,60 @@ $container-gutter: space(4) 0 !default;
 
 ### Display
 
+- `.display-flex`
+- `.display-inline-flex`
+- `.display-inline`
+- `.display-grid`
+
+### Elevation
+
+```scss
+$elevation-steps: (
+  0: none,
+  1: 0 2px 4px rgba($color-gray-500, 0.5),
+  2: 0 2px 6px rgba($color-gray-600, 0.6),
+  3: 0 3px 6px rgba($color-gray-600, 0.7),
+  4: 0 4px 6px rgba($color-gray-600, 0.7),
+) !default;
+```
+
+Mixins:
+- `elevation(4)`
+
+Selectors:
+- `.ev-0` to `.ev-4`, like defined
+
 ### Grid
 
 - changed scope of modifier (`.col-reverse`, `.row-reverse`)
 - changed `col-xs-<n>` to `col-<n>`
 - `.flex-wrap` 
+- `.flex-nowrap` 
 - `.flex-column`
-- `.row.dense`
+- `.row`
+- Grid
+    - `.display-grid`
+    - `.cols-gap-0` to `.cols-gap-4`, like defined in spacings
+    - `.cols-one`, `.cols-sm-one` to `.cols-xlg-one`
+    - `.cols-two` ...
+    - `.cols-three` ...
+    - `.cols-four` ...
+    - `.cols-five` ...
+    - `.cols-six` ...
+
+### Position
+
+Selectors:
+
+- `.absolute`
+- `.relative`
+- `.fixed`
+- `.sticky`
+- `.pos-0` for top, right, bottom, left with `0`
+- `.top-0`
+- `.right-0`
+- `.bottom-0`
+- `.left-0`
 
 ### Spacings
 

@@ -1,12 +1,12 @@
 $container-gutter: space(4) 0 !default;
 
 .container {
-  &-fluid {
-    @include breakpoint-min($bp-medium) {
-      max-width: map-get($container-sizes, 'small');
+    &-fluid {
+        @include breakpoint-min($bp-medium) {
+            max-width: map-get($container-sizes, 'small');
+        }
+        @include breakpoint-min($bp-xlarge) {
+            max-width: map-get($container-sizes, 'large');
+        }
     }
-    @include breakpoint-min($bp-xlarge) {
-      max-width: map-get($container-sizes, 'large');
-    }
-  }
 }

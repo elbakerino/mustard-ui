@@ -7,48 +7,48 @@ $panel-head-color: $color-gray-50 !default;
 $panel-footer-color: $color-gray-50 !default;
 
 .panel {
-  background: $panel-bg-color;
-  border-radius: 5px;
-  overflow: hidden;
-  margin: 0 0 space(4) 0;
+    background: $panel-bg-color;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 0 space(4) 0;
 
-  @if $panel-shadow {
-    box-shadow: 0 4px 12px rgba($color-gray-300, 0.5);
-  }
+    @if $panel-shadow {
+        box-shadow: elevation(light);
+    }
 }
 
 .panel-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: space(2);
-  background: $panel-head-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: space(4);
+    background: $panel-head-color;
+}
 
-  .panel-title {
+.panel-title {
     @include title2;
     margin: 0;
+}
 
-    &.dense {
-      @include title3;
-    }
-  }
+.panel-title-dense {
+    @include title3;
 }
 
 .panel-body {
-  margin: space(4) space(2);
+    margin: space(5) space(4);
+}
 
-  &.dense {
-    margin: space(2);
-  }
+.panel-body-dense {
+    margin: space(4);
 }
 
 .panel-footer {
-  margin: space(2);
-  background: $panel-footer-color;
+    margin: space(4);
+    background: $panel-footer-color;
 
-  & > * {
-    margin-bottom: 0;
-  }
+    & > * {
+        margin-bottom: 0;
+    }
 }
 
 .panel-image {

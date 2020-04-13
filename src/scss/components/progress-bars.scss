@@ -4,9 +4,9 @@
 $progress-bar-height: 20px !default;
 $progress-bar-bg-color: $color-gray-200 !default;
 $progress-bar-colors: (
-    'green'  : $color-green-400,
-    'blue'   : $color-blue-400,
-    'red'    : $color-red-400,
+    'green' : $color-green-400,
+    'blue' : $color-blue-400,
+    'red' : $color-red-400,
 ) !default;
 
 .progress-bar {
@@ -35,7 +35,10 @@ $progress-bar-colors: (
         & > span:after {
             content: "";
             position: absolute;
-            top: 0; left: 0; bottom: 0; right: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
             background-image: linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
             background-size: 50px 50px;
             overflow: hidden;

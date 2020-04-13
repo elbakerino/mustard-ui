@@ -9,21 +9,21 @@ $section-class: '.section' !default;
 $section-selector: '#{$section-class}, section' !default;
 
 #{$section-selector} {
-  padding: 30px;
+    padding: 30px;
 
-  :last-child {
-    margin-bottom: 0;
-  }
+    :last-child {
+        margin-bottom: 0;
+    }
 }
 
 #{$section-class}-primary {
-  background: $section-primary-bg-color;
+    background: $section-primary-bg-color;
 }
 
 #{$section-class}-secondary {
-  background: $section-secondary-bg-color;
+    background: $section-secondary-bg-color;
 }
 
 #{$section-class}-tertiary {
-  background: $section-tertiary-bg-color;
+    background: $section-tertiary-bg-color;
 }

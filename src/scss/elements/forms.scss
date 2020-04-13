@@ -69,9 +69,9 @@ select {
     appearance: none;
     display: block;
     width: 100%;
-    padding: 10px;
-    line-height: 20px;
-    font-size: 16px;
+    padding: space(1);
+    //line-height: 20px;
+    font-size: 1em;
     font-weight: inherit;
     background: $input-bg-color;
     border-radius: 5px;
@@ -116,7 +116,7 @@ input[type="range"] {
 
 input[type="color"] {
     display: initial;
-    padding: 0 !important;
+    padding: 0;
     height: 42px;
 }
 
@@ -127,6 +127,12 @@ select {
     background-size: 5px 5px, 5px 5px, 1px 1.5em;
     background-repeat: no-repeat;
     padding-right: 30px;
+
+    &.dense {
+        background-position: calc(100% - 12px) calc(1em + 0px), calc(100% - 7px) calc(1em + 0px), calc(100% - 25px) 0.3em;
+        background-size: 5px 5px, 5px 5px, 1px 1.5em;
+        padding-right: 25px;
+    }
 
     &:hover {
         cursor: pointer;

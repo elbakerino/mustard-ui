@@ -4,20 +4,20 @@
 ul,
 ol,
 dl, {
-  list-style: none;
-  margin-bottom: 15px;
+    list-style: none;
+    margin-bottom: 15px;
 }
 
 ul {
-  list-style: circle inside;
+    list-style: circle inside;
 }
 
 ol {
-  list-style: decimal inside;
+    list-style: decimal inside;
 }
 
 .no-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }

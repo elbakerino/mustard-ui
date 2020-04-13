@@ -1,0 +1,19 @@
+////
+/// Background Classes
+/// @group Opacity
+////
+
+$background-colors: (
+    'trans' : 'transparent',
+    'body' : $body-bg-color,
+    'primary' : $brand-color,
+    'accent' : $color-blue-700,
+    'light': rgba($color-white, 0.8),
+    'dark': rgba($color-black, 0.8),
+) !default;
+
+@each $name, $color in $background-colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+}
